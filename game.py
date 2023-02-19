@@ -1,4 +1,6 @@
 #!/bin/python
+from colorama import Fore, Back  
+
 
 lights = {}
 
@@ -18,11 +20,11 @@ for person in range(100):
 for i in range(len(lights)):
 
     if lights[i] == True:
-        print("🟡", end="")
+         print(Back.YELLOW + Fore.BLACK + '{0: >2}'.format(str(i+1)), end="")
 
     else:
-        print("⚫", end="")
+         print(Back.BLACK + "⚪", end="")
 
     if (i+1) % 10 == 0:
-        print()
+        print(Back.BLACK + " ")
 
